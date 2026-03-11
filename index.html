@@ -1,256 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pleasant Hill Renovation — Kitchen & Bathroom Remodeling in Pleasant Hill & Central Contra Costa</title>
-    <meta name="description" content="Professional kitchen and bathroom remodeling in Pleasant Hill & Central Contra Costa. 35% off kitchens, 25% off bathrooms, free 3D design. Licensed & insured. 21+ years experience.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; line-height: 1.6; }
-        
-        .hero {
-            background: linear-gradient(135deg, rgba(15,23,42,0.92), rgba(30,58,95,0.88)),
-                        url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80') center/cover;
-            color: white;
-            padding: 80px 20px 100px;
-            text-align: center;
-        }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 16px; font-weight: 800; letter-spacing: -0.5px; }
-        .hero p { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
-        .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 6px 16px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 24px; }
-        
-        .cta-btn {
-            display: inline-block;
-            background: #f59e0b;
-            color: #1a1a1a;
-            padding: 16px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.4); }
-        
-        .phone-link { display: block; margin-top: 16px; color: white; font-size: 1.1rem; text-decoration: none; opacity: 0.9; }
-        .phone-link:hover { opacity: 1; }
-        
-        .offers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            max-width: 960px;
-            margin: -50px auto 60px;
-            padding: 0 20px;
-        }
-        .offer-card {
-            background: white;
-            border-radius: 12px;
-            padding: 32px 24px;
-            text-align: center;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
-        }
-        .offer-card .discount { font-size: 2.4rem; font-weight: 800; color: #f59e0b; }
-        .offer-card h3 { margin: 8px 0; font-size: 1.2rem; }
-        .offer-card p { color: #666; font-size: 0.95rem; }
-        
-        .section { padding: 60px 20px; max-width: 960px; margin: 0 auto; }
-        .section h2 { font-size: 2rem; margin-bottom: 16px; text-align: center; font-weight: 700; }
-        .section .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 1.05rem; }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-        }
-        .service-item {
-            background: #f8fafc;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .service-item img { width: 100%; height: 200px; object-fit: cover; }
-        .service-item .content { padding: 20px; }
-        .service-item h3 { font-size: 1.15rem; margin-bottom: 8px; }
-        .service-item p { color: #666; font-size: 0.9rem; }
-        
-        .process {
-            background: #f8fafc;
-            padding: 60px 20px;
-        }
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        .step { text-align: center; padding: 20px; }
-        .step-num {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px; height: 48px;
-            background: #1e3a5f;
-            color: white;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-        .step h3 { margin-bottom: 8px; font-size: 1.05rem; }
-        .step p { color: #666; font-size: 0.9rem; }
-        
-        .trust {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .trust-items { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px; }
-        .trust-item { text-align: center; }
-        .trust-item .num { font-size: 2rem; font-weight: 800; color: #1e3a5f; }
-        .trust-item .label { color: #666; font-size: 0.9rem; }
-        
-        .cta-section {
-            background: linear-gradient(135deg, #1e3a5f, #0f172a);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .cta-section h2 { font-size: 2rem; margin-bottom: 12px; }
-        .cta-section p { opacity: 0.9; margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; }
-        
-        footer {
-            background: #0f172a;
-            color: rgba(255,255,255,0.6);
-            text-align: center;
-            padding: 24px 20px;
-            font-size: 0.85rem;
-        }
-        footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
-        
-        @media (max-width: 640px) {
-            .hero h1 { font-size: 2rem; }
-            .offers { grid-template-columns: 1fr; margin-top: -30px; }
-            .trust-items { gap: 24px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pleasant Hill Renovation — Home Remodeling in Pleasant Hill</title>
+<meta name="description" content="Pleasant Hill's renovation experts. Kitchen, bathroom & whole-home remodeling near Contra Costa Centre, Treat Blvd & Gregory Gardens. 21+ years, 200+ 5-star reviews, licensed & insured.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #1B2A41;
+  --amber: #D97706;
+  --amber-light: #F59E0B;
+  --white: #FFFFFF;
+  --gray-bg: #F8FAFC;
+  --warm-bg: #FFFBF5;
+  --charcoal: #374151;
+  --charcoal-light: #6B7280;
+}
+body { font-family: 'Inter', sans-serif; color: var(--charcoal); line-height: 1.6; }
+h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; color: var(--navy); line-height: 1.2; }
+
+.top-bar { background: var(--navy); color: var(--white); padding: 10px 0; font-size: 14px; }
+.top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.top-bar a { color: var(--amber-light); text-decoration: none; font-weight: 600; }
+header { background: var(--white); border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100; }
+header .container { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
+.logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--navy); text-decoration: none; }
+.logo span { color: var(--amber); }
+nav { display: flex; gap: 28px; align-items: center; }
+nav a { text-decoration: none; color: var(--charcoal); font-size: 15px; font-weight: 500; transition: color 0.2s; }
+nav a:hover { color: var(--amber); }
+.btn { display: inline-block; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.25s; cursor: pointer; border: none; }
+.btn-primary { background: var(--amber); color: var(--white); }
+.btn-primary:hover { background: #B45309; transform: translateY(-1px); }
+.btn-outline { border: 2px solid var(--amber); color: var(--amber); background: transparent; }
+.btn-outline:hover { background: var(--amber); color: var(--white); }
+.btn-navy { background: var(--navy); color: var(--white); }
+.btn-navy:hover { background: #243B53; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-label { display: inline-block; color: var(--amber); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+.section-title { font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; }
+.section-subtitle { color: var(--charcoal-light); font-size: 17px; max-width: 640px; }
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* HERO — warm, welcoming with rounded image inset */
+.hero { padding: 80px 0 60px; background: var(--warm-bg); }
+.hero-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center; }
+.hero-text-col { }
+.hero-welcome { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--amber); margin-bottom: 20px; }
+.hero-welcome::before { content: ''; width: 32px; height: 2px; background: var(--amber); }
+.hero h1 { font-size: clamp(34px, 4.5vw, 52px); margin-bottom: 20px; }
+.hero p { font-size: 18px; color: var(--charcoal-light); line-height: 1.7; margin-bottom: 28px; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 36px; }
+.hero-badges { display: flex; gap: 24px; flex-wrap: wrap; }
+.hero-badge-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--charcoal); }
+.badge-icon { width: 40px; height: 40px; background: var(--navy); color: var(--amber-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 14px; flex-shrink: 0; }
+.hero-img-col { position: relative; }
+.hero-img-main { width: 100%; height: 480px; object-fit: cover; border-radius: 16px; box-shadow: 0 24px 48px rgba(0,0,0,0.1); }
+.hero-img-float { position: absolute; bottom: -24px; left: -32px; width: 200px; height: 200px; object-fit: cover; border-radius: 12px; border: 6px solid var(--warm-bg); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+
+/* TRUST STRIP */
+.trust-strip { background: var(--navy); padding: 28px 0; }
+.trust-items { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
+.trust-item { text-align: center; color: var(--white); }
+.trust-item strong { display: block; font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--amber-light); }
+.trust-item span { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; }
+
+/* OFFERS — warm cards */
+.offers { padding: 80px 0; }
+.offers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.offer-card { background: var(--warm-bg); border-radius: 16px; padding: 36px; text-align: center; border: 1px solid #F3E8D8; transition: transform 0.25s, box-shadow 0.25s; }
+.offer-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(217,119,6,0.1); }
+.offer-pct { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--amber); line-height: 1; }
+.offer-label { font-size: 13px; color: var(--charcoal-light); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; margin-bottom: 12px; }
+.offer-card h3 { font-size: 22px; margin-bottom: 8px; }
+.offer-card p { color: var(--charcoal-light); font-size: 15px; }
+
+/* SERVICES — alternating image/text rows */
+.services { padding: 80px 0; background: var(--gray-bg); }
+.service-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 40px 0; border-bottom: 1px solid #E5E7EB; }
+.service-row:last-child { border-bottom: none; }
+.service-row:nth-child(even) .service-img-wrap { order: 2; }
+.service-img-wrap { position: relative; }
+.service-img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; }
+.service-text h3 { font-size: 26px; margin-bottom: 12px; }
+.service-text p { color: var(--charcoal-light); font-size: 16px; line-height: 1.7; margin-bottom: 16px; }
+.service-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.service-list li { background: var(--white); border: 1px solid #E5E7EB; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 500; color: var(--charcoal); }
+
+/* PROCESS */
+.process { padding: 80px 0; }
+.process-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 48px; }
+.process-step { text-align: center; position: relative; padding: 24px 16px; }
+.process-step::before { content: ''; position: absolute; top: 40px; left: 50%; right: -50%; height: 2px; background: #E5E7EB; }
+.process-step:last-child::before { display: none; }
+.process-circle { width: 56px; height: 56px; border-radius: 50%; background: var(--warm-bg); border: 3px solid var(--amber); color: var(--amber); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 22px; margin: 0 auto 16px; position: relative; z-index: 2; }
+.process-step h3 { font-size: 16px; margin-bottom: 6px; }
+.process-step p { font-size: 13px; color: var(--charcoal-light); }
+
+/* LOCAL */
+.local { padding: 80px 0; background: var(--warm-bg); }
+.local-content { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-top: 40px; }
+.local-text h3 { font-size: 28px; margin-bottom: 16px; }
+.local-text p { color: var(--charcoal-light); font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
+.local-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+.highlight-card { background: var(--white); border-radius: 10px; padding: 20px; border: 1px solid #E5E7EB; }
+.highlight-card h4 { font-size: 16px; margin-bottom: 4px; }
+.highlight-card p { font-size: 13px; color: var(--charcoal-light); margin: 0; }
+.local-img { width: 100%; height: 440px; object-fit: cover; border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+
+/* REVIEWS */
+.reviews { padding: 80px 0; }
+.reviews-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+.review-card { background: var(--gray-bg); border-radius: 16px; padding: 36px; }
+.review-stars { color: var(--amber); font-size: 18px; letter-spacing: 2px; margin-bottom: 16px; }
+.review-card blockquote { font-size: 16px; line-height: 1.7; color: var(--charcoal); font-style: italic; margin-bottom: 20px; }
+.review-author { font-weight: 600; color: var(--navy); }
+.review-location { font-size: 14px; color: var(--charcoal-light); }
+
+/* CTA */
+.cta { padding: 80px 0; background: var(--navy); color: var(--white); text-align: center; position: relative; overflow: hidden; }
+.cta::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(217,119,6,0.08); border-radius: 50%; }
+.cta::after { content: ''; position: absolute; bottom: -60px; left: -60px; width: 250px; height: 250px; background: rgba(217,119,6,0.05); border-radius: 50%; }
+.cta .container { position: relative; z-index: 2; }
+.cta h2 { color: var(--white); font-size: clamp(30px, 4vw, 44px); margin-bottom: 16px; }
+.cta p { opacity: 0.85; font-size: 18px; max-width: 580px; margin: 0 auto 32px; line-height: 1.7; }
+.cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+.cta-phone { font-family: 'DM Serif Display', serif; font-size: 34px; color: var(--amber-light); }
+.cta-phone a { color: var(--amber-light); text-decoration: none; }
+.cta-note { margin-top: 16px; font-size: 14px; opacity: 0.6; }
+
+footer { background: #0F1924; color: rgba(255,255,255,0.6); padding: 48px 0 24px; font-size: 14px; }
+footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+footer a { color: var(--amber-light); text-decoration: none; }
+
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 5px 0; transition: 0.3s; }
+
+@media (max-width: 900px) {
+  .offers-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-track { grid-template-columns: repeat(3, 1fr); }
+  .process-step::before { display: none; }
+}
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 24px; gap: 16px; border-bottom: 1px solid #E5E7EB; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+  nav.open { display: flex; }
+  .hero-layout { grid-template-columns: 1fr; gap: 32px; }
+  .hero-img-float { display: none; }
+  .service-row { grid-template-columns: 1fr; }
+  .service-row:nth-child(even) .service-img-wrap { order: 0; }
+  .local-content { grid-template-columns: 1fr; }
+  .reviews-layout { grid-template-columns: 1fr; }
+  .offers-grid { grid-template-columns: 1fr; }
+  .process-track { grid-template-columns: repeat(2, 1fr); }
+  .trust-items { gap: 24px; }
+  .local-highlights { grid-template-columns: 1fr; }
+  .top-bar .container { justify-content: center; text-align: center; }
+  .hero-badges { flex-direction: column; gap: 12px; }
+}
+</style>
 </head>
 <body>
-    <section class="hero">
-        <div class="hero-badge">Serving Pleasant Hill & Central Contra Costa — Licensed & Insured</div>
-        <h1>Transform Your Pleasant Hill Home</h1>
-        <p>Local experts delivering beautiful kitchen and bathroom renovations to Pleasant Hill homeowners.</p>
-        <a href="tel:4159079070" class="cta-btn">Get Your Free Estimate</a>
-        <a href="tel:4159079070" class="phone-link">Or call us: (415) 907-9070</a>
-    </section>
 
-    <div class="offers">
-        <div class="offer-card">
-            <div class="discount">35% Off</div>
-            <h3>Kitchen Remodels</h3>
-            <p>Transform your kitchen with a complete remodel at an unbeatable price.</p>
+<div class="top-bar">
+  <div class="container">
+    <span>Pleasant Hill's Trusted Renovation Experts</span>
+    <a href="tel:4159079070">(415) 907-9070 — Free Consultation</a>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <a href="#" class="logo">Pleasant Hill<span>Renovation</span></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#local">Our Area</a>
+      <a href="tel:4159079070" class="btn btn-primary">Free Estimate</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-layout">
+      <div class="hero-text-col">
+        <div class="hero-welcome">Pleasant Hill's Renovation Experts</div>
+        <h1>Beautiful Home Renovations for Pleasant Hill Families</h1>
+        <p>Kitchen, bathroom, and whole-home remodeling designed for the way Pleasant Hill families live. From cozy updates to complete transformations, we deliver quality craftsmanship with a personal touch — backed by 21+ years of experience.</p>
+        <div class="hero-actions">
+          <a href="tel:4159079070" class="btn btn-primary">Schedule Free Consultation</a>
+          <a href="#services" class="btn btn-outline">See Our Services</a>
         </div>
-        <div class="offer-card">
-            <div class="discount">25% Off</div>
-            <h3>Bathroom Remodels</h3>
-            <p>Upgrade your bathroom with quality renovations tailored to your style.</p>
+        <div class="hero-badges">
+          <div class="hero-badge-item"><div class="badge-icon">21+</div><span>Years of<br>Experience</span></div>
+          <div class="hero-badge-item"><div class="badge-icon">200+</div><span>5-Star<br>Reviews</span></div>
+          <div class="hero-badge-item"><div class="badge-icon">Lic.</div><span>Licensed<br>& Insured</span></div>
         </div>
-        <div class="offer-card">
-            <div class="discount">Free</div>
-            <h3>3D Design & Rendering</h3>
-            <p>See your dream space before we build it with complimentary 3D designs.</p>
-        </div>
+      </div>
+      <div class="hero-img-col">
+        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80" alt="Warm modern bathroom with freestanding tub and natural light" class="hero-img-main">
+        <img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=400&q=80" alt="Kitchen renovation detail" class="hero-img-float">
+      </div>
     </div>
+  </div>
+</section>
 
-    <section class="section">
-        <h2>Our Services</h2>
-        <p class="subtitle">From kitchens and bathrooms to full home renovations, we handle it all.</p>
-        <div class="services-grid">
-            <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Kitchen Remodeling">
-                <div class="content">
-                    <h3>Kitchen Remodeling</h3>
-                    <p>Custom cabinetry, countertops, fixtures, and layouts designed around how you live.</p>
-                </div>
-            </div>
-            <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Bathroom Remodeling">
-                <div class="content">
-                    <h3>Bathroom Remodeling</h3>
-                    <p>Modern bathrooms with premium materials, expert tile work, and smart design.</p>
-                </div>
-            </div>
-            <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Full Home Renovation">
-                <div class="content">
-                    <h3>Full Home Renovation</h3>
-                    <p>Complete home transformations that increase your property value and quality of life.</p>
-                </div>
-            </div>
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-items">
+      <div class="trust-item"><strong>35% Off</strong><span>Kitchen Remodeling</span></div>
+      <div class="trust-item"><strong>25% Off</strong><span>Bathroom Remodeling</span></div>
+      <div class="trust-item"><strong>Free</strong><span>3D Design Rendering</span></div>
+      <div class="trust-item"><strong>$0 Down</strong><span>Financing Available</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="offers">
+  <div class="container text-center">
+    <span class="section-label">Special Offers</span>
+    <h2 class="section-title">Savings for Pleasant Hill Homeowners</h2>
+    <p class="section-subtitle mx-auto">Quality renovation doesn't have to break the bank. Take advantage of our current promotions and flexible financing options.</p>
+    <div class="offers-grid">
+      <div class="offer-card">
+        <div class="offer-pct">35%</div>
+        <div class="offer-label">Off</div>
+        <h3>Kitchen Remodeling</h3>
+        <p>Custom kitchens with premium cabinetry, stone countertops, and thoughtful layouts for your family's daily life.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-pct">25%</div>
+        <div class="offer-label">Off</div>
+        <h3>Bathroom Remodeling</h3>
+        <p>From guest baths to master retreats, we create beautiful bathrooms with quality fixtures and expert craftsmanship.</p>
+      </div>
+      <div class="offer-card">
+        <div class="offer-pct">Free</div>
+        <div class="offer-label">Included</div>
+        <h3>3D Design Preview</h3>
+        <p>See your finished renovation in photorealistic 3D before we start. Adjust colors, materials, and layout with confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Our Services</span>
+      <h2 class="section-title">Complete Renovation Services</h2>
+      <p class="section-subtitle mx-auto">Everything you need to transform your Pleasant Hill home, managed by one dedicated team from concept to completion.</p>
+    </div>
+    <div style="margin-top:48px;">
+      <div class="service-row">
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&q=80" alt="Modern kitchen remodel" class="service-img">
         </div>
-    </section>
-
-    <section class="process">
-        <div style="max-width:960px;margin:0 auto;">
-            <h2 style="text-align:center;margin-bottom:40px;">How It Works</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-num">1</div>
-                    <h3>Free Consultation</h3>
-                    <p>We visit your home, discuss your vision, and assess the project scope.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">2</div>
-                    <h3>3D Design</h3>
-                    <p>See your new space in 3D before construction begins. Completely free.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">3</div>
-                    <h3>Build & Install</h3>
-                    <p>Our expert team brings the design to life with quality craftsmanship.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">4</div>
-                    <h3>Final Walkthrough</h3>
-                    <p>We walk through every detail together to ensure your complete satisfaction.</p>
-                </div>
-            </div>
+        <div class="service-text">
+          <h3>Kitchen Remodeling</h3>
+          <p>The kitchen is the heart of every Pleasant Hill home. We design and build kitchens that work for real families — with durable materials, smart storage, and a style that reflects how you live and entertain.</p>
+          <ul class="service-list">
+            <li>Custom Cabinetry</li>
+            <li>Quartz Countertops</li>
+            <li>Island Design</li>
+            <li>Premium Appliances</li>
+            <li>Lighting Design</li>
+          </ul>
         </div>
-    </section>
-
-    <section class="trust">
-        <h2>Why Homeowners Trust Us</h2>
-        <div class="trust-items">
-            <div class="trust-item">
-                <div class="num">21+</div>
-                <div class="label">Years Experience</div>
-            </div>
-            <div class="trust-item">
-                <div class="num">200+</div>
-                <div class="label">5-Star Reviews</div>
-            </div>
-            <div class="trust-item">
-                <div class="num">500+</div>
-                <div class="label">Projects Completed</div>
-            </div>
-            <div class="trust-item">
-                <div class="num">100%</div>
-                <div class="label">Licensed & Insured</div>
-            </div>
+      </div>
+      <div class="service-row">
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=700&q=80" alt="Luxury bathroom renovation" class="service-img">
         </div>
-    </section>
+        <div class="service-text">
+          <h3>Bathroom Remodeling</h3>
+          <p>Create a private retreat in your own home. From efficient hall bathrooms to luxurious master suites, we handle every detail — tile, fixtures, vanities, lighting, and ventilation — with care and precision.</p>
+          <ul class="service-list">
+            <li>Walk-in Showers</li>
+            <li>Custom Vanities</li>
+            <li>Heated Floors</li>
+            <li>Designer Tile</li>
+            <li>Frameless Glass</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-row">
+        <div class="service-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=700&q=80" alt="Full home interior" class="service-img">
+        </div>
+        <div class="service-text">
+          <h3>Full Home, ADU, Additions & Outdoor</h3>
+          <p>Beyond kitchens and bathrooms, we handle whole-home remodeling, accessory dwelling units, room additions, and outdoor living spaces. One team, one vision, from permits through final inspection.</p>
+          <ul class="service-list">
+            <li>Whole-Home Remodel</li>
+            <li>ADU Construction</li>
+            <li>Room Additions</li>
+            <li>Outdoor Kitchens</li>
+            <li>Patio & Pergola</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="cta-section">
-        <h2>Ready to Transform Your Home?</h2>
-        <p>Get a free estimate and see what's possible with our complimentary 3D design service.</p>
-        <a href="tel:4159079070" class="cta-btn">Call (415) 907-9070</a>
-    </section>
+<section class="process" id="process">
+  <div class="container text-center">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">Your Renovation in 5 Simple Steps</h2>
+    <p class="section-subtitle mx-auto">A clear, stress-free process from your first call to the final walk-through.</p>
+    <div class="process-track">
+      <div class="process-step">
+        <div class="process-circle">1</div>
+        <h3>Free Consultation</h3>
+        <p>We visit your Pleasant Hill home to understand your vision and take measurements.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-circle">2</div>
+        <h3>Proposal in 12hrs</h3>
+        <p>Receive a transparent, detailed proposal by the next morning.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-circle">3</div>
+        <h3>3D Design</h3>
+        <p>Photorealistic renderings let you see and adjust your design before construction.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-circle">4</div>
+        <h3>Materials Selection</h3>
+        <p>Choose from premium materials with expert guidance from our design team.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-circle">5</div>
+        <h3>Construction</h3>
+        <p>Our professional crews bring your renovation to life with clean, on-time execution.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>Pleasant Hill Renovation — Serving Pleasant Hill & Central Contra Costa</p>
-        <p style="margin-top:8px;">Pleasant Hill, CA</p>
-        <p style="margin-top:8px;"><a href="tel:4159079070">(415) 907-9070</a></p>
-        <p style="margin-top:16px;">&copy; 2026 Pleasant Hill Renovation. All rights reserved.</p>
-    </footer>
+<section class="local" id="local">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Your Neighborhood</span>
+      <h2 class="section-title">Proudly Serving Pleasant Hill</h2>
+    </div>
+    <div class="local-content">
+      <div class="local-text">
+        <h3>We Know Pleasant Hill Inside and Out</h3>
+        <p>From the family neighborhoods near Gregory Gardens to the homes around Contra Costa Centre, we understand what makes Pleasant Hill special. Our team has remodeled homes throughout the city's diverse neighborhoods, combining modern design with the warm, community-centered character that defines this area.</p>
+        <p>Conveniently located near the Pleasant Hill BART station, we serve homeowners across the Treat Boulevard corridor, the neighborhoods around Pleasant Hill Park, and everything in between. Licensed, insured, and deeply committed to our local community.</p>
+        <div class="local-highlights">
+          <div class="highlight-card">
+            <h4>Contra Costa Centre</h4>
+            <p>Modern condos and family homes near BART and shopping</p>
+          </div>
+          <div class="highlight-card">
+            <h4>Treat Blvd Area</h4>
+            <p>Established neighborhoods with mid-century charm</p>
+          </div>
+          <div class="highlight-card">
+            <h4>Gregory Gardens</h4>
+            <p>Classic family neighborhood with renovation potential</p>
+          </div>
+          <div class="highlight-card">
+            <h4>Financing Available</h4>
+            <p>Flexible options to make your renovation affordable</p>
+          </div>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80" alt="Beautiful renovated home interior" class="local-img">
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Homeowner Reviews</span>
+      <h2 class="section-title">What Pleasant Hill Families Say</h2>
+    </div>
+    <div class="reviews-layout">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"We renovated our kitchen in our home near Gregory Gardens and could not be happier. The team was respectful of our space, kept the job site incredibly clean, and finished on schedule. Our new kitchen has completely changed how we use our home — the kids do homework at the island while I cook. It just works."</blockquote>
+        <div class="review-author">Stephanie & James H.</div>
+        <div class="review-location">Gregory Gardens, Pleasant Hill</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Living near the Contra Costa Centre, we wanted a bathroom that felt like a boutique hotel. These guys delivered beyond what we imagined. The 3D design preview was amazing — we could see exactly what we were getting. The heated floors are life-changing, and the whole project came in on budget. Highly recommend to any Pleasant Hill homeowner."</blockquote>
+        <div class="review-author">Daniel K.</div>
+        <div class="review-location">Contra Costa Centre, Pleasant Hill</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Renovate Your Pleasant Hill Home?</h2>
+    <p>Schedule a free in-home consultation today. We'll listen to your ideas, take measurements, and deliver a detailed proposal within 12 hours. No pressure, no obligation.</p>
+    <div class="cta-actions">
+      <a href="tel:4159079070" class="btn btn-primary">Call for Free Estimate</a>
+      <a href="#services" class="btn btn-outline" style="border-color:var(--amber-light);color:var(--amber-light);">Explore Services</a>
+    </div>
+    <div class="cta-phone"><a href="tel:4159079070">(415) 907-9070</a></div>
+    <div class="cta-note">Licensed & Insured General Contractor &mdash; Serving Pleasant Hill & Surrounding Communities</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>Pleasant Hill Renovation &mdash; Licensed & Insured &mdash; Contra Costa Centre, Treat Blvd, Gregory Gardens & Surrounding Areas</span>
+    <a href="tel:4159079070">(415) 907-9070</a>
+  </div>
+</footer>
+
 </body>
 </html>
